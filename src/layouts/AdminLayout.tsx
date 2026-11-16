@@ -11,8 +11,10 @@ export default function AdminLayout() {
   return (
     <div className="flex min-h-screen bg-slate-50">
 
-      {/* Desktop Sidebar */}
-      <AdminSidebar />
+      <AdminSidebar
+        mobileOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+      />
 
       <div className="flex min-w-0 flex-1 flex-col">
 
@@ -26,19 +28,15 @@ export default function AdminLayout() {
             <Menu size={24} />
           </button>
 
-          <span className="font-bold text-slate-900">QR Menu Admin</span>
+          <span className="font-bold text-slate-900">
+            QR Menu Admin
+          </span>
         </div>
 
-        {/* Existing Admin Header */}
+        {/* Desktop Header */}
         <div className="hidden md:block">
           <AdminHeader />
         </div>
-
-        {/* Mobile Sidebar */}
-        <AdminSidebar
-          mobileOpen={mobileMenuOpen}
-          onClose={() => setMobileMenuOpen(false)}
-        />
 
         <main className="min-w-0 flex-1 p-4 sm:p-5 lg:p-8">
           <Outlet />
