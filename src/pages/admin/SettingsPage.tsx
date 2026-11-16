@@ -222,12 +222,11 @@ export default function SettingsPage() {
                 onChange={(e) => setCurrency(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 outline-none focus:border-orange-500"
               >
-                <option value="JPY">JPY - Japanese Yen (¥)</option>
+                <option value="MYR">MYR - Malaysian Ringgit (RM)</option>
                 <option value="USD">USD - US Dollar ($)</option>
                 <option value="MMK">MMK - Myanmar Kyat (K)</option>
                 <option value="THB">THB - Thai Baht (฿)</option>
                 <option value="SGD">SGD - Singapore Dollar (S$)</option>
-                <option value="EUR">EUR - Euro (€)</option>
               </select>
             </div>
           </div>
