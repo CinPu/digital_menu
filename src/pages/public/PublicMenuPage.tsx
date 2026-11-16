@@ -6,8 +6,8 @@ import {
   Utensils,
   AlertCircle,
   Search,
-  ChevronRight,
-  Leaf,
+//   ChevronRight,
+//   Leaf,
 } from 'lucide-react'
 
 import { publicMenuService } from '../../services/public-menu.service'
@@ -378,7 +378,6 @@ export default function PublicMenuPage() {
 
 function MenuCard({
   item,
-  language,
   price,
   name,
   description,
