@@ -1,0 +1,55 @@
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+button {
+  cursor: pointer;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .qr-print-area,
+  .qr-print-area * {
+    visibility: visible;
+  }
+
+  .qr-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .qr-print-area > div {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  @page {
+    margin: 15mm;
+  }
+}
