@@ -4,10 +4,9 @@ import { useParams } from 'react-router-dom'
 import { Globe, Utensils, AlertCircle } from 'lucide-react'
 import { publicMenuService } from '../../services/public-menu.service'
 import type {
-  PublicMenuData,
   Category,
   MenuItem,
-} from '../../services/public-menu.service'
+} from '../../types/database'
 
 type Language = 'en' | 'my'
 

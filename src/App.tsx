@@ -21,17 +21,6 @@ import DashboardPage from './pages/admin/DashboardPage'
 
 import { Toaster } from 'sonner'
 
-function ComingSoon({ title }: { title: string }) {
-  return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-8">
-      <h1 className="text-xl font-bold">{title}</h1>
-      <p className="mt-2 text-sm text-slate-500">
-        This module is coming soon.
-      </p>
-    </div>
-  )
-}
-
 export default function App() {
   return (
     <BrowserRouter>

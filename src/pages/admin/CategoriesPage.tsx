@@ -1,6 +1,6 @@
 
 import { useEffect, useState, type FormEvent } from 'react'
-import { Plus, Pencil, Trash2, X, Check, Loader2 } from 'lucide-react'
+import { Plus, Pencil, Trash2, X, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
 import { supabase } from '../../services/supabase'
 import {
