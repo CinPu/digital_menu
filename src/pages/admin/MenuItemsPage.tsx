@@ -405,23 +405,7 @@ export default function MenuItemsPage() {
             if (!file || !restaurantId) return
 
             try {
-              setUploading(true)
-              const { data: { user }, error: authError } =
-                await supabase.auth.getUser()
-console.log('AUTH USER:', user?.id)
-console.log('AUTH ERROR:', authError)
-console.log('RESTAURANT ID:', restaurantId)
-
-const { data: restaurant, error: restaurantError } =
-  await supabase
-    .from('restaurants')
-    .select('id, owner_id')
-    .eq('id', restaurantId)
-    .single()
-
-console.log('RESTAURANT:', restaurant)
-console.log('RESTAURANT ERROR:', restaurantError)
-               
+              setUploading(true) 
               const imageUrl =
                 await storageService.uploadMenuImage(
                   file,
@@ -595,7 +579,7 @@ console.log('RESTAURANT ERROR:', restaurantError)
                       {categoryName(item.category_id)}
                     </td>
                     <td className="px-5 py-4 font-medium">
-                      ¥{Number(item.price).toLocaleString('ja-JP')}
+                      {Number(item.price)}
                     </td>
                     <td className="px-5 py-4">
                       <button
